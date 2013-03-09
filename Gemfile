@@ -49,3 +49,22 @@ gem 'prototype_legacy_helper', '0.0.0', :git => 'http://github.com/rails/prototy
 gem 'rails_autolink', '~> 1.0.9'
 gem 'dynamic_form', '~> 1.1.4'
 
+group :development, :test do
+  gem 'ruby-debug19', :require => 'ruby-debug'
+  gem 'factory_girl', '~> 3.5'
+  gem 'webrat'
+  gem 'rspec-rails', '~> 2.12.0'
+  gem 'simplecov', :require => false
+  gem 'sqlite3'
+  gem 'cucumber'
+  gem 'cucumber-rails', :require => false
+  gem 'cucumber-rails-training-wheels'
+  gem 'database_cleaner'
+  gem 'capybara'
+  gem 'guard-rspec', '1.2.1'
+  gem 'rb-inotify', '~> 0.9'
+  gem 'libnotify', '0.5.9'
+  gem 'guard-spork', '1.4.2'
+  gem 'spork', '0.9.2'
+  gem 'annotate', '2.5.0'
+end
