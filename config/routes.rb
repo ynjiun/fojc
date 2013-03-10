@@ -1,6 +1,8 @@
 Fojc::Application.routes.draw do
  # root :to 'fojc#home'
   
+  match '/', to: 'fojc#home'
+  
   get "fojc/home"
 
   get "fojc/chinese"
