@@ -1,4 +1,20 @@
 Fojc::Application.routes.draw do
+ # root :to 'fojc#home'
+  
+  get "fojc/home"
+
+  get "fojc/chinese"
+
+  get "fojc/schinese"
+
+  get "fojc/english"
+
+  get "fojc/help"
+
+  get "fojc/about"
+
+  get "fojc/contact"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
