@@ -1,2 +1,19 @@
-<h1>Fojc#home</h1>
-<p>Find me in app/views/fojc/home.html.erb</p>
+<% provide(:title, 'Home') %>
+<div class="center hero-unit">
+  <div class="color-skyblue">
+    <h1>Faith of Jesus Christ</h1>
+  </div>
+  <div class="color-bloodred">
+  	<h1>耶穌基督的信實</h1>
+  </div>
+  <h2>
+    This is the home page for downloading Bible of His Faith.
+  </h2>
+  <%= link_to "聖經", '#', class: "btn btn-large btn-primary" %>
+  <%= link_to "圣经", '#', class: "btn btn-large btn-primary" %>
+  <%= link_to "Bible", '#', class: "btn btn-large btn-primary" %>
+  
+</div>
+
+<%= link_to image_tag("BibleReader.png", alt: "Bible Reader app"), 'https://itunes.apple.com/us/app/bible-reader/id537474288?mt=8' %>
+

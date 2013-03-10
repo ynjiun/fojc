@@ -7,6 +7,7 @@ describe "Fojcs" do
     it "should have the content 'Faith of Jesus Christ'" do
       visit ('/fojc/home')
       page.should have_content('Faith of Jesus Christ')
+      #page.should have_content('耶穌基督的信實')
     end
   end
   
