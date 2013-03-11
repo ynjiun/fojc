@@ -1,24 +1,24 @@
 Fojc::Application.routes.draw do
   
+  resources :users
+
+
   root :to => 'fojc#home'
  
   match '/', to: 'fojc#home'
   match '/help',    to: 'fojc#help'
   match '/about',   to: 'fojc#about'
   match '/contact', to: 'fojc#contact'
+  match '/chinese', to: 'fojc#chinese'
+  match '/schinese', to: 'fojc#schinese'
+  match '/english', to: 'fojc#english'
   
   get "fojc/home"
-
   get "fojc/chinese"
-
   get "fojc/schinese"
-
   get "fojc/english"
-
   get "fojc/help"
-
   get "fojc/about"
-
   get "fojc/contact"
 
   # The priority is based upon order of creation:
