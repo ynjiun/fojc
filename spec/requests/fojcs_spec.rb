@@ -4,8 +4,9 @@ describe "fojc" do
   
   describe "Home page" do
 
-    it "should have the content 'Faith of Jesus Christ'" do
-      visit root_path
+  before {visit root_path}
+  
+  it "should have the content 'Faith of Jesus Christ'" do
       page.should have_content('Faith of Jesus Christ')
       #page.should have_content('耶穌基督的信實')
     end

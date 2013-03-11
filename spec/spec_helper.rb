@@ -29,6 +29,9 @@ Spork.prefork do
     #add this line to fix: undefined method `visit' for #<RSpec::Core::ExampleGroup error!!!
     config.include Capybara::DSL
     
+    #add this line to fix: undefined local variable or method `root_path'!!!!
+    #config.include Rails.application.routes.url_helpers
+    
     # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
     config.fixture_path = "#{::Rails.root}/spec/fixtures"
   

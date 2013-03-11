@@ -1,7 +1,11 @@
 Fojc::Application.routes.draw do
- # root :to 'fojc#home'
   
+  root :to => 'fojc#home'
+ 
   match '/', to: 'fojc#home'
+  match '/help',    to: 'fojc#help'
+  match '/about',   to: 'fojc#about'
+  match '/contact', to: 'fojc#contact'
   
   get "fojc/home"
 
