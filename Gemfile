@@ -52,8 +52,8 @@ gem 'dynamic_form', '~> 1.1.4'
 
 group :development, :test do
   gem 'ruby-debug19', :require => 'ruby-debug'
-  gem 'factory_girl', '~> 3.5'
-  #gem 'webrat'
+  gem 'factory_girl_rails', '4.1.0'
+  gem 'webrat'
   gem 'rspec-rails', '~> 2.12.0'
   gem 'simplecov', :require => false
   gem 'sqlite3'
