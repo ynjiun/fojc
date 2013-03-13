@@ -2,7 +2,8 @@ group :production do
   gem 'pg'
 end
 
-source :rubygems
+#source :rubygems
+source 'https://rubygems.org'
 gem 'feedzirra'
 gem 'jquery-rails'
 
