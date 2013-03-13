@@ -53,7 +53,7 @@ gem 'dynamic_form', '~> 1.1.4'
 group :development, :test do
   gem 'ruby-debug19', :require => 'ruby-debug'
   gem 'factory_girl_rails', '4.1.0'
-  gem 'webrat'
+  #gem 'webrat' #do not use webrat and capybara at the same time!!!
   gem 'rspec-rails', '~> 2.12.0'
   gem 'simplecov', :require => false
   gem 'sqlite3'
@@ -61,7 +61,7 @@ group :development, :test do
   gem 'cucumber-rails', :require => false
   gem 'cucumber-rails-training-wheels'
   gem 'database_cleaner'
-  gem 'capybara'
+  gem 'capybara', '1.1.2' #stable version 1.1.2, version 2.0.2 doesn't work for have_selector('title', :text => ...)
   gem 'guard-rspec', '1.2.1'
   gem 'rb-inotify', '~> 0.9'
   gem 'libnotify', '0.5.9'

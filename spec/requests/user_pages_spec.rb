@@ -9,8 +9,8 @@ describe "User pages" do
     before { visit user_path(user) }
       
     #need webrat to use content: keyword!!!
-    it { should have_selector('h1',    content: user.name) }
-    it { should have_selector('title', content: full_title(user.name)) }
+    it { should have_selector('h1',    text: user.name) }
+    it { should have_selector('title', text: full_title(user.name)) }
   end
 
   describe "signup" do
@@ -36,6 +36,16 @@ describe "User pages" do
         it "should create a user" do
           expect { click_button submit }.to change(User, :count).by(1)
         end
+        
+        describe "after saving the user" do
+          before { click_button submit }
+          let(:user) { User.find_by_email('user@example.com') }
+  
+          it { should have_selector('title', text: user.name) }
+          it { should have_selector('div.alert.alert-success', content: 'Welcome') }
+          it { should have_link('Sign out') }
+        end
+        
       end
   end
   
