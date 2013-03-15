@@ -3,11 +3,10 @@
 <table>
   <tr>
     <th>Name</th>
-
-    <th>Filename</th>
-
     <th>Language</th>
     <th>Public</th>
+    <th>Size</th>
+    <th>Last Update</th>
     <th></th>
     <th></th>
     <th></th>
@@ -16,11 +15,10 @@
 <% @contents.each do |content| %>
   <tr>
     <td><%= content.name %></td>
-
-    <td><%= content.filename %></td>
-
     <td><%= content.language %></td>
     <td><%= content.public %></td>
+    <td> <%= number_to_human_size(content.avatar.size) %></td>
+    <td> <%= Time.at(content.avatar.updated_at) %></td>
     <td>|<%= link_to 'Show', content.avatar.url %></td>
     <td>|<%= link_to 'Edit', edit_content_path(content) %></td>
     <td>|<%= link_to 'Destroy', content, method: :delete, data: { confirm: 'Are you sure?' } %></td>
