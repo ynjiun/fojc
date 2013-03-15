@@ -1,5 +1,7 @@
 Fojc::Application.routes.draw do
   
+  resources :contents
+
   resources :sessions, only: [:new, :create, :destroy]
 
   resources :users
