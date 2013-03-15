@@ -30,6 +30,8 @@
   <%= @content.public %>
 </p>
 
+<%= link_to @content.name, @content.avatar.url %> | 
+
 
 <%= link_to 'Edit', edit_content_path(@content) %> |
 <%= link_to 'Back', contents_path %>

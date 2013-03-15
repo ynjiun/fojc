@@ -35,6 +35,12 @@
     <%= f.label :public %><br />
     <%= f.check_box :public %>
   </div>
+  
+  <div>
+    <%= f.label :avatar, "upload file" %>
+    <%= f.file_field :avatar %>
+  </div>
+  
   <div class="actions">
     <%= f.submit %>
   </div>

@@ -3,9 +3,9 @@
 <table>
   <tr>
     <th>Name</th>
-    <th>Description</th>
+
     <th>Filename</th>
-    <th>Url</th>
+
     <th>Language</th>
     <th>Public</th>
     <th></th>
@@ -16,14 +16,14 @@
 <% @contents.each do |content| %>
   <tr>
     <td><%= content.name %></td>
-    <td><%= content.description %></td>
+
     <td><%= content.filename %></td>
-    <td><%= content.url %></td>
+
     <td><%= content.language %></td>
     <td><%= content.public %></td>
-    <td><%= link_to 'Show', content %></td>
-    <td><%= link_to 'Edit', edit_content_path(content) %></td>
-    <td><%= link_to 'Destroy', content, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td>|<%= link_to 'Show', content.avatar.url %></td>
+    <td>|<%= link_to 'Edit', edit_content_path(content) %></td>
+    <td>|<%= link_to 'Destroy', content, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>
