@@ -1,42 +1,56 @@
-<%= form_for(@content, :html => {:class => "form-horizontal"}) do |f| %>
-  <% if @content.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@content.errors.count, "error") %> prohibited this content from being saved:</h2>
+<div class="row">
+  <div class="span6 offset2">
+    <%= form_for(@content, html: { class: "form-horizontal" } ) do |f| %>
+     <fieldset>
 
-      <ul>
-      <% @content.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
+      <%= render 'shared/content_error_msg' %>
+	  
+	  <div class="control-group">
+      <%= f.label :name, :class => "control-label"  %>
+      <div class="controls">
+      <%= f.text_field :name %>
+      </div>	  	
+	  </div>
+      
+	  <div class="control-group">
+      <%= f.label :description, :class => "control-label"  %>
+      <div class="controls">
+      <%= f.text_field :description %>
+      </div>	  	
+	  </div>
+	  
+	  <div class="control-group">
+      	<%= f.label :chinese, :class => "control-label" %>
+      	<div class="controls">
+      	  <%= f.check_box :chinese %>
+	  	</div>	  	
+	  </div>
+	  
+      <div class="control-group">
+      	<%= f.label :schinese, :class => "control-label" %>
+      	<div class="controls">
+      	  <%= f.check_box :schinese %>
+	  	</div>
+	  </div>	
+	  
+	  <div class="control-group">	
+	  	<%= f.label :english, :class => "control-label" %>
+      	<div class="controls">
+      	  <%= f.check_box :english %>
+	  	</div>
+      </div>
+      
+      <div class="control-group">
+      <%= f.label :avatar, "Upload File" , :class => "control-label" %>
+      <div class="controls">
+      <%= f.file_field :avatar %>
+      </div>
+	  </div>
+	  
+	  <div class="form-actions">
+      <%= f.submit "Create Content", class: "btn btn-large btn-primary" %>
+      </div>
+     </fieldset>
+    <% end %>
   </div>
-  <div class="field">
-    <%= f.label :description %><br />
-    <%= f.text_field :description %>
-  </div>
-
-  <div class="field">
-    <%= f.label :chinese %><br />
-    <%= f.check_box :chinese %>
-
-    <%= f.label :schinese %><br />
-    <%= f.check_box :schinese %>
-
-    <%= f.label :english %><br />
-    <%= f.check_box :english %>
-  </div>
-  
-  <div>
-    <%= f.label :avatar, "upload file" %>
-    <%= f.file_field :avatar %>
-  </div>
-  
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+</div>
