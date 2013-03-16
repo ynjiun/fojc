@@ -1,0 +1,4 @@
+touch foo
+git add foo
+git commit -m "foo"
+git push heroku
