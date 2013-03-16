@@ -1,0 +1,34 @@
+<% provide(:title, "Update Content") %> 
+
+<h1>Updating Content</h1>
+
+<div class="row">
+  <div class="span6 offset3 form-horizontal">
+    <%= form_for(@content) do |f| %>
+      <%= render 'shared/content_error_msg' %>
+
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+
+      <%= f.label :description %>
+      <%= f.text_field :description %>
+
+      <%= f.label :chinese %>
+      <%= f.check_box :chinese %>
+
+      <%= f.label :schinese %>
+      <%= f.check_box :schinese %>
+      
+      <%= f.label :english %>
+      <%= f.check_box :english %>
+      <div>
+      <%= f.label :avatar, "upload file" %>
+      <%= f.file_field :avatar %>
+	  </div>
+      <%= f.submit "Save changes", class: "btn btn-large btn-primary" %>
+    <% end %>
+  </div>
+</div>
+
+<%= link_to 'Show', @content.avatar.url %> |
+<%= link_to 'Back', contents_path %>

@@ -1,0 +1,42 @@
+<% provide(:title, @content.name) %>
+<div class="row">
+  <aside class="span4">
+    <section>
+      <h1>
+        <%= image_tag @content.avatar.url(:thumb) %>
+        <%= @content.name %>
+      </h1>
+    </section>
+  </aside>
+</div>
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @content.name %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @content.description %>
+</p>
+
+<p>
+  <b>Publish in Chinese download page:</b>
+  <%= @content.chinese %>
+</p>
+<p>
+  <b>Publish in Simplified Chinese download page:</b>
+  <%= @content.schinese %>
+</p>
+<p>
+  <b>Publish in English download page:</b>
+  <%= @content.english %>
+</p>
+
+<%= link_to @content.name, @content.avatar.url %> | 
+
+
+<%= link_to 'Edit', edit_content_path(@content) %> |
+<%= link_to 'Back', contents_path %>

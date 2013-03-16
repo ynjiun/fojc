@@ -1,0 +1,42 @@
+<%= form_for(@content, :html => {:class => "form-horizontal"}) do |f| %>
+  <% if @content.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@content.errors.count, "error") %> prohibited this content from being saved:</h2>
+
+      <ul>
+      <% @content.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_field :description %>
+  </div>
+
+  <div class="field">
+    <%= f.label :chinese %><br />
+    <%= f.check_box :chinese %>
+
+    <%= f.label :schinese %><br />
+    <%= f.check_box :schinese %>
+
+    <%= f.label :english %><br />
+    <%= f.check_box :english %>
+  </div>
+  
+  <div>
+    <%= f.label :avatar, "upload file" %>
+    <%= f.file_field :avatar %>
+  </div>
+  
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

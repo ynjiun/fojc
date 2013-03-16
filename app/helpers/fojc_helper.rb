@@ -1,0 +1,2 @@
+module FojcHelper
+end

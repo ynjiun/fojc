@@ -1,0 +1,20 @@
+<% provide(:title, 'Home') %>
+<div class="center hero-unit">
+  <div class="color-skyblue">
+    <h1>Faith of Jesus Christ</h1>
+  </div>
+  <div class="color-bloodred">
+  	<h1>耶穌基督的信實</h1>
+  </div>
+  <h2>
+    This is the home page for downloading Bible of His Faith.
+  </h2>
+  <%= link_to "下 載 聖 經", chinese_path, class: "btn btn-large btn-primary" %>
+  <%= link_to "下 载 圣 经", schinese_path, class: "btn btn-large btn-primary" %>
+  <%= link_to "Download Bible", english_path, class: "btn btn-large btn-primary" %>
+  
+</div>
+
+<%= link_to image_tag("BibleReader-Icon57.png", alt: "Bible Reader app"), 'https://itunes.apple.com/us/app/bible-reader/id537474288?mt=8' %>
+<%= link_to image_tag("twitter.jpeg", :size => "65x65", alt: "Follow AmenIsFaith"), 'https://twitter.com/AmenIsFaith' %>
+<%= link_to image_tag("blog.jpeg", :size => "65x65", alt: "Bible Verse Sharing Blog"), 'http://faithofjesuschrist.com' %>
