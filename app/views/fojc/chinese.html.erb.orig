@@ -1,0 +1,45 @@
+<% provide(:title, 'Chinese') %>
+<div class="center hero-unit">
+  <div class="color-bloodred">
+  	<h1>耶穌基督的信實</h1>
+  </div>
+  <h2>
+    This is the home page for downloading Bible of His Faith.
+  </h2>
+<<<<<<< HEAD
+  
+  <table class="table table-striped table-hover">
+  	<tr>
+  		<th></th>
+    	<th>Name</th>
+    	<th>Size</th>
+    	<th>Last Update</th>
+  	</tr>
+
+	<% @contents.each do |content| %>
+		<% if content.chinese? %>
+  			<tr>
+    			<td><%= link_to image_tag(content.avatar.url(:thumb), size: "51x51"), content.avatar.url %></td>
+    			<td><%= link_to content.name, content.avatar.url %></td>
+    			<td><%= number_to_human_size(content.avatar.size) %></td>
+    			<td><%= Time.at(content.avatar.updated_at) %></td>
+  			</tr>
+  		<% end %>
+	<% end %>
+  </table>
+=======
+  <%= link_to "下 載 聖 經", chinese_path, class: "btn btn-large btn-primary" %>
+  <%= link_to "下 载 圣 经", '#', class: "btn btn-large btn-primary" %>
+  <%= link_to "Download Bible", '#', class: "btn btn-large btn-primary" %>
+  
+>>>>>>> 54e44574b90f0ff06ae9084cf915e08c0157218f
+</div>
+
+<%= link_to image_tag("BibleReader-Icon57.png", alt: "Bible Reader app"), 'https://itunes.apple.com/us/app/bible-reader/id537474288?mt=8' %>
+<%= link_to image_tag("twitter.jpeg", :size => "65x65", alt: "Follow AmenIsFaith"), 'https://twitter.com/AmenIsFaith' %>
+<%= link_to image_tag("blog.jpeg", :size => "65x65", alt: "Bible Verse Sharing Blog"), 'http://faithofjesuschrist.com' %>
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 54e44574b90f0ff06ae9084cf915e08c0157218f

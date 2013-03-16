@@ -1,0 +1,32 @@
+<% provide(:title, @user.name) %>
+<div class="row">
+  <aside class="span4">
+    <section>
+      <h1>
+        <%= gravatar_for @user %>
+        <%= @user.name %>
+      </h1>
+    </section>
+  </aside>
+</div>
+
+<p>
+  <b>Name:</b>
+  <%= @user.name %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @user.email %>
+</p>
+
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %> 
+<% if current_user.admin? %>
+<<<<<<< HEAD
+  | <%= link_to "Manage Contents", contents_path %>
+=======
+  | <%= link_to "Contents", contents_path %>
+>>>>>>> 54e44574b90f0ff06ae9084cf915e08c0157218f
+<% end %>
