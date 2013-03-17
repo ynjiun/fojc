@@ -4,8 +4,8 @@ class VersesController < ApplicationController
   # GET /verses
   # GET /verses.json
   def index
-    @verses = Verse.all
-
+    #@verses = Verse.all
+    @verses = Verse.paginate(page: params[:page]) 
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @verses }

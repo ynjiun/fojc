@@ -13,7 +13,7 @@
 
 <% @contents.each do |content| %>
   <tr>
-    <td><%= link_to image_tag(content.avatar.url(:thumb),:size => '51x51' ), content_path(content) %></td>
+    <td><%= link_to image_tag(content.avatar.url(:thumb),:size => '39x39', :class => "img-polaroid" ), content_path(content) %></td>
     <td><%= content.name %></td>
     <td> <%= number_to_human_size(content.avatar.size) %></td>
     <td> <%= Time.at(content.avatar.updated_at) %></td>
