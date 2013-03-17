@@ -25,4 +25,5 @@
 <%= link_to 'Back', users_path %> 
 <% if current_user.admin? %>
   | <%= link_to "Manage Contents", contents_path %>
+  | <%= link_to "Manage Verses", verses_path %>
 <% end %>

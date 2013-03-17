@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130315160512) do
+ActiveRecord::Schema.define(:version => 20130316230545) do
 
   create_table "contents", :force => true do |t|
     t.string   "name"
@@ -39,5 +39,15 @@ ActiveRecord::Schema.define(:version => 20130315160512) do
 
   add_index "users", ["email"], :name => "index_users_on_email"
   add_index "users", ["remember_token"], :name => "index_users_on_remember_token"
+
+  create_table "verses", :force => true do |t|
+    t.string   "verse"
+    t.text     "chinese"
+    t.text     "schinese"
+    t.text     "english"
+    t.date     "last_show"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
 end

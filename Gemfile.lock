@@ -58,6 +58,9 @@ GEM
       xpath (~> 0.1.4)
     childprocess (0.3.9)
       ffi (~> 1.0, >= 1.0.11)
+    ckeditor (4.0.2)
+      mime-types
+      orm_adapter
     climate_control (0.0.3)
       activesupport (>= 3.0)
     cocaine (0.5.1)
@@ -159,6 +162,7 @@ GEM
       net-ssh (>= 2.6.5)
     net-ssh (2.6.6)
     nokogiri (1.5.6)
+    orm_adapter (0.4.0)
     paperclip (3.4.1)
       activemodel (>= 3.0.0)
       activerecord (>= 3.0.0)
@@ -278,6 +282,7 @@ DEPENDENCIES
   bootstrap-sass (= 2.1)
   bootstrap-will_paginate (= 0.0.6)
   capybara (= 1.1.2)
+  ckeditor
   coderay (~> 0.9)
   coffee-rails (~> 3.2.1)
   cucumber

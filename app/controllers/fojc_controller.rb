@@ -4,14 +4,17 @@ class FojcController < ApplicationController
 
   def chinese
     @contents = Content.all
+    @verse = Verse.find_by_id(2)
   end
 
   def schinese
     @contents = Content.all
+    @verse = Verse.find_by_id(2)
   end
 
   def english
     @contents = Content.all
+    @verse = Verse.find_by_id(2)
   end
 
   def help

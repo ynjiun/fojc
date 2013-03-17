@@ -1,0 +1,31 @@
+<h1>Listing verses</h1>
+
+<table>
+  <tr>
+    <th>Verse</th>
+    <th>Chinese</th>
+    <th>Schinese</th>
+    <th>English</th>
+    <th>Last show</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @verses.each do |verse| %>
+  <tr>
+    <td><%= verse.verse %></td>
+    <td><%= verse.chinese.html_safe %></td>
+    <td><%= verse.schinese.html_safe %></td>
+    <td><%= verse.english.html_safe %></td>
+    <td><%= verse.last_show %></td>
+    <td><%= link_to 'Show', verse %></td>
+    <td><%= link_to 'Edit', edit_verse_path(verse) %></td>
+    <td><%= link_to 'Destroy', verse, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Verse', new_verse_path %>

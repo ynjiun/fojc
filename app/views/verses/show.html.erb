@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Verse:</b>
+  <%= @verse.verse %>
+</p>
+
+<p>
+  <b>Chinese:</b>
+  <%= @verse.chinese.html_safe %>
+</p>
+
+<p>
+  <b>Schinese:</b>
+  <%= @verse.schinese.html_safe %>
+</p>
+
+<p>
+  <b>English:</b>
+  <%= @verse.english.html_safe %>
+</p>
+
+<p>
+  <b>Last show:</b>
+  <%= @verse.last_show %>
+</p>
+
+
+<%= link_to 'Edit', edit_verse_path(@verse) %> |
+<%= link_to 'Back', verses_path %>

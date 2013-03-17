@@ -1,0 +1,37 @@
+<%= form_for(@verse) do |f| %>
+  <% if @verse.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@verse.errors.count, "error") %> prohibited this verse from being saved:</h2>
+
+      <ul>
+      <% @verse.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :verse %><br />
+    <%= f.text_field :verse %>
+  </div>
+  <div class="field">
+    <%= f.label :chinese %><br />
+    <%= f.cktext_area :chinese, :ckeditor => {:uiColor => "#AADC6E", :toolbar => "mini"} %>
+  </div>
+  <div class="field">
+    <%= f.label :schinese %><br />
+    <%= f.cktext_area :schinese, :ckeditor => {:uiColor => "#AADC6E", :toolbar => "mini"} %>
+  </div>
+  <div class="field">
+    <%= f.label :english %><br />
+    <%= f.cktext_area :english, :ckeditor => {:uiColor => "#AADC6E", :toolbar => "mini"} %>
+  </div>
+  <div class="field">
+    <%= f.label :last_show %><br />
+    <%= f.date_select :last_show %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
