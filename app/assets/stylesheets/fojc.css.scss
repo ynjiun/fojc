@@ -29,6 +29,12 @@ $bloodred: #AF111C;
   @include box_sizing;
 }
 
+/* paper */
+.paper {
+background-image:url('paper.jpg');
+background-position:center center;
+}
+
 /* users index */
 
 .users {
@@ -157,10 +163,13 @@ h2 {
   color: $grayLight;
 }
 
+
 p {
   font-size: 1.1em;
   line-height: 1.7em;
   text-align: left;
+  margin-left: 2.0em;
+  margin-right: 2.0em;
 }
 
 

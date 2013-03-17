@@ -17,9 +17,9 @@
 <% @verses.each do |verse| %>
   <tr>
     <td><%= verse.verse %></td>
-    <td><%= verse.chinese.html_safe %></td>
-    <td><%= verse.schinese.html_safe %></td>
-    <td><%= verse.english.html_safe %></td>
+    <td><%= verse.chinese[0,30].html_safe %></td>
+    <td><%= verse.schinese[0,30].html_safe %></td>
+    <td><%= verse.english[0,40].html_safe %></td>
     <td><%= verse.last_show %></td>
     <td><%= link_to 'Show', verse %></td>
     <td><%= link_to 'Edit', edit_verse_path(verse) %></td>
