@@ -1,4 +1,4 @@
-group :production do
+group :development, :test, :production do
   gem 'pg'
 end
 
