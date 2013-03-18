@@ -1,4 +1,11 @@
 GIT
+  remote: git://github.com/kristianmandrup/social-buttons.git
+  revision: 7d0ef2c5f63939336b1e30629084e68360ce3f87
+  specs:
+    social-buttons (0.3.7)
+      rails (>= 3.0.0)
+
+GIT
   remote: http://github.com/rails/prototype_legacy_helper.git
   revision: a2cd95c3e3c1a4f7a9566efdab5ce59c886cb05f
   specs:
@@ -318,6 +325,7 @@ DEPENDENCIES
   rubypants (~> 0.2.0)
   sass-rails (~> 3.2.3)
   simplecov
+  social-buttons!
   spork (= 0.9.2)
   sqlite3
   uglifier (>= 1.0.3)
