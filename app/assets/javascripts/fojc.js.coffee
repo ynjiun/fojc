@@ -2,7 +2,7 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 
-#$('.label-with-popover').popover(placement: 'right') #notice: 'right' is default
 
 $('a[rel=popover]').popover('show')
+$('a[data-toggle="tooltip"]').tooltip('show')
 $('a[toggle=tooltip]').tooltip('show')
