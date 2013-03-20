@@ -20,7 +20,9 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-#gem "recaptcha", "~> 0.3.5"
+#gem "twitter-bootstrap-rails"
+#gem "therubyracer"
+#gem "less-rails"
 gem "social-buttons", git: "git://github.com/kristianmandrup/social-buttons.git"
 gem 'ckeditor'
 gem 'will_paginate', '3.0.3'

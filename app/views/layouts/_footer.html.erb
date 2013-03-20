@@ -1,10 +1,12 @@
 <footer class="footer">
-<%= link_to image_tag("BibleReader-Icon57.png", alt: "Bible Reader app"), 'https://itunes.apple.com/us/app/bible-reader/id537474288?mt=8' %>
-<%= link_to image_tag("twitter.jpeg", :size => "65x65", alt: "Follow AmenIsFaith"), 'https://twitter.com/AmenIsFaith' %>
-<%= link_to image_tag("blog.jpeg", :size => "65x65", alt: "Bible Verse Sharing Blog"), 'http://faithofjesuschrist.com' %>
+
+<%= link_to image_tag("BibleReader-Icon57.png", alt: "Bible Reader app"), 'https://itunes.apple.com/us/app/bible-reader/id537474288?mt=8', toggle: "tooltip", :title => "Bible Reader App for iPhone/iPad" %>
+<%= link_to image_tag("twitter.jpeg", :size => "65x65", alt: "Follow AmenIsFaith"), 'https://twitter.com/AmenIsFaith', toggle: "tooltip", :title => "Follow @AmenisFaith"  %>
+<%= link_to image_tag("blog.jpeg", :size => "65x65", alt: "Bible Verse Sharing Blog"), 'http://faithofjesuschrist.com', toggle: "tooltip", :title => "Sharing Bible Verse? Join us in the Blog!"  %>
+
 <div class="float-right">
 <%= like_button(416317678458229) %>
-<%= pinit_button(url: 'http://fojc.net', media: 'http://www.fojc.net/system/contents/avatars/000/000/010/original/Bible-Icon-114.png?1363669010') %>
+<%= pinit_button(url: 'http://fojc.net', media: 'http://www.fojc.net/system/contents/avatars/000/000/010/original/Bible-Icon-114.png?1363669010', :"count-layout" => "vertical" ) %>
 <%= tweet_button %>
 </div>
 <br>
@@ -16,4 +18,6 @@
       <li><a href="http://faithofjesuschrist.com/">News</a></li>
     </ul>
   </nav>
+  
 </footer>
+
