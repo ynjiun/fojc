@@ -20,16 +20,13 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-#gem "twitter-bootstrap-rails"
-#gem "therubyracer"
-#gem "less-rails"
 gem "social-buttons", git: "git://github.com/kristianmandrup/social-buttons.git"
 gem 'ckeditor'
 gem 'will_paginate', '3.0.3'
 gem 'bootstrap-will_paginate', '0.0.6'
 gem 'faker', '1.0.1'
 gem 'paperclip', '~> 3.1'
-gem 'bootstrap-sass', '2.1'
+gem 'bootstrap-sass', '~> 2.3.1.0'
 gem 'bcrypt-ruby', '3.0.1'
 gem 'activesupport', '~> 3.2.10'
 gem 'rails', '~> 3.2.6'

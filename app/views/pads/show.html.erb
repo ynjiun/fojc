@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @pad.name %>
+</p>
+
+<p>
+  <b>Snippet:</b>
+  <%= @pad.snippet %>
+</p>
+
+<p>
+  <b>Snippet.html_safe:</b>
+  <%= @pad.snippet.html_safe %>
+</p>
+
+<%= link_to 'Edit', edit_pad_path(@pad) %> |
+<%= link_to 'Back', pads_path %>
