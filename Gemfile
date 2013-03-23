@@ -48,6 +48,7 @@ gem 'acts_as_list'
 gem 'acts_as_tree_rails3'
 gem 'fog'
 gem 'recaptcha', :require => 'recaptcha/rails', :branch => 'rails3'
+gem 'newrelic_rpm'
 
 # TODO: Replace with jquery
 gem 'prototype-rails', '~> 3.2.1'
