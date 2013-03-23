@@ -1,5 +1,7 @@
 CKEDITOR.editorConfig = function (config) {
 
+	//config.contentsCss = 'contents.css'
+
     config.extraPlugins = 'insertFontLink';
     
 config.toolbar = 'Full';   //Add the plugin to the full toolbar
