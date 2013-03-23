@@ -231,4 +231,4 @@ production:
 staging:
   <<: *default_settings
   monitor_mode: true
-   app_name: FOJC.NET
+#   app_name: FOJC.NET
