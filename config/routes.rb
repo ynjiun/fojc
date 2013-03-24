@@ -1,5 +1,8 @@
 Fojc::Application.routes.draw do
   
+  resources :pads
+
+
   resources :verses
 
   resources :contents

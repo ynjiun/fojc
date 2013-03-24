@@ -22,9 +22,17 @@
   </p>
 <% end %>
 
+<div class="paper">
+<br>
+<h3 class="center">Your personal micro-blog for Bible Verse sharing is comming soon!</h3>
+<br>
+</div>
+
+<br>
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %> 
 <% if current_user.admin? %>
   | <%= link_to "Manage Contents", contents_path %>
   | <%= link_to "Manage Verses", verses_path %>
+  | <%= link_to "Manage Pads", pads_path %>
 <% end %>

@@ -12,6 +12,10 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require bootstrap 
+//= require jquery.min
+//= require bootstrap-tooltip
+//= require bootstrap-popover
+//= require bootstrap
 //= require ckeditor/init
 //= require_tree .
+

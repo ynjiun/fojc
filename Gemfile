@@ -1,4 +1,4 @@
-group :production do
+group :development, :test, :production do
   gem 'pg'
 end
 
@@ -20,12 +20,13 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
+gem "social-buttons", git: "git://github.com/kristianmandrup/social-buttons.git"
 gem 'ckeditor'
 gem 'will_paginate', '3.0.3'
 gem 'bootstrap-will_paginate', '0.0.6'
 gem 'faker', '1.0.1'
 gem 'paperclip', '~> 3.1'
-gem 'bootstrap-sass', '2.1'
+gem 'bootstrap-sass', '~> 2.3.1.0'
 gem 'bcrypt-ruby', '3.0.1'
 gem 'activesupport', '~> 3.2.10'
 gem 'rails', '~> 3.2.6'
@@ -47,6 +48,7 @@ gem 'acts_as_list'
 gem 'acts_as_tree_rails3'
 gem 'fog'
 gem 'recaptcha', :require => 'recaptcha/rails', :branch => 'rails3'
+gem 'newrelic_rpm'
 
 # TODO: Replace with jquery
 gem 'prototype-rails', '~> 3.2.1'

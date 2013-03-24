@@ -29,11 +29,38 @@ $bloodred: #AF111C;
   @include box_sizing;
 }
 
+.float-center {
+	display:inline-block;
+	float:center;
+}
+
+.float-left {
+	display:inline-block;
+	float:left;
+}
+
+	.float-right {
+	display:inline-block;
+	float:right;
+}
+
 /* paper */
 .paper {
 background-image:url('paper.jpg');
 background-position:center center;
 }
+
+.box-shadow {
+	width: 100px;
+	height: 100px;
+	margin: 20px;
+	background-color: transparent;
+	box-shadow: 0 0 10px #000;
+}
+
+/* image hover effect */
+ .ex1 img{ float: left; margin: 15px; -webkit-transition: margin 0.5s ease-out; -moz-transition: margin 0.5s ease-out; -o-transition: margin 0.5s ease-out; } 
+ .ex1 img:hover { margin-top: 2px; } 
 
 /* users index */
 

@@ -12,10 +12,10 @@ Fojc::Application.configure do
   config.serve_static_assets = false
 
   # Compress JavaScripts and CSS
-  config.assets.compress = true
+  config.assets.compress = true 
 
   # Don't fallback to assets pipeline if a precompiled asset is missed
-  config.assets.compile = true
+  config.assets.compile = false #false for Heroku deployment, true for local Passenger deployment
 
   # Generate digests for assets URLs
   config.assets.digest = true
@@ -70,6 +70,7 @@ Fojc::Application.configure do
     
   # Force all access to the app over SSL, use Strict-Transport-Security, 
   # and use secure cookies.
+  # config.force_ssl = true
   config.force_ssl = true
     
 end
