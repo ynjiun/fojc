@@ -13,6 +13,8 @@ class MicropostsController < ApplicationController
     else
       flash[:notice] = "Post cannot be empty!"
       redirect_to user_path(current_user)
+      
+      #render '/users/show', id: current_user.id
     end
   end
 
