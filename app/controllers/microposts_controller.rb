@@ -12,7 +12,7 @@ class MicropostsController < ApplicationController
       redirect_to current_user
     else
       flash[:notice] = "Post cannot be empty!"
-      redirect_to current_user
+      redirect_to user_path(current_user)
     end
   end
 
