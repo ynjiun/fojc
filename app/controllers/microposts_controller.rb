@@ -1,5 +1,6 @@
 class MicropostsController < ApplicationController
   before_filter :signed_in_user, only: [:create, :destroy]
+  before_filter :correct_user, only: :destroy
     
   def index
     
@@ -9,15 +10,22 @@ class MicropostsController < ApplicationController
     @micropost = current_user.microposts.build(params[:micropost])
     if @micropost.save
       flash[:success] = "Micropost created!"
-      redirect_to current_user
+      redirect_to blogs_home_path
     else
-      flash[:notice] = "Post cannot be empty!"
-      redirect_to user_path(current_user)
-      
-      #render '/users/show', id: current_user.id
+      @feed_items = []
+      render blogs_home_path #'blogs/home'
     end
   end
 
   def destroy
+    @micropost.destroy
+    redirect_to blogs_home_path
   end
+
+  private
+
+    def correct_user
+      @micropost = current_user.microposts.find_by_id(params[:id])
+      redirect_to blogs_home_path if @micropost.nil?
+    end
 end

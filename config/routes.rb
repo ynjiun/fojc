@@ -1,5 +1,9 @@
 Fojc::Application.routes.draw do
   
+  get "blogs/home"
+
+  get "blogs/follow"
+
   resources :microposts, only: [:create, :destroy]
   
   resources :pads
