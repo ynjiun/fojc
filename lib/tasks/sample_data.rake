@@ -25,6 +25,8 @@ namespace :db do
     
     make_relationships
     
+    make_verse
+    
   end
 end
 
@@ -35,4 +37,12 @@ def make_relationships
   followers      = users[3..40]
   followed_users.each { |followed| user.follow!(followed) }
   followers.each      { |follower| follower.follow!(user) }
+end
+
+def make_verse
+  verse = 'Rom 10:10'
+  chinese = 'Chinese Verse Here!'
+  schinese = 'Simplified Chinese Verse Here!'
+  english = 'English Verse Here!'
+  Verse.create!(verse: verse, chinese: chinese, schinese: schinese, english: english)
 end
