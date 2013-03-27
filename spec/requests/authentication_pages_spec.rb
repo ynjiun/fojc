@@ -51,8 +51,20 @@ describe "Authentication" do
     describe "for non-signed-in users" do
       let(:user) { FactoryGirl.create(:user) }
         
+      describe "in the Relationships controller" do
+        describe "submitting to the create action" do
+          before { post relationships_path }
+          specify { response.should redirect_to(signin_path) }
+        end
+
+        describe "submitting to the destroy action" do
+          before { delete relationship_path(1) }
+          specify { response.should redirect_to(signin_path) }          
+        end
+      end  
+        
       describe "in the Microposts controller" do
-      
+   
         describe "submitting to the create action" do
           before { post microposts_path }
           specify { response.should redirect_to(signin_path) }
@@ -62,7 +74,8 @@ describe "Authentication" do
           before { delete micropost_path(FactoryGirl.create(:micropost)) }
           specify { response.should redirect_to(signin_path) }
         end
-      end
+        
+      end #end of "in the Microposts controller"
 
       describe "in the Users controller" do
 
@@ -80,7 +93,8 @@ describe "Authentication" do
           before { put user_path(user) }
           specify { response.should redirect_to(signin_path) }
         end
-      end
+        
+      end #end of "in the Users controller
       
       describe "when attempting to visit a protected page" do
         before do
@@ -96,9 +110,10 @@ describe "Authentication" do
             page.should have_selector('title', text: 'Edit user')
           end
         end
-      end
+        
+      end #end of "when attempting to visit a protected page"
       
-    end
+    end #end of "for non-signed-in users"
     
     describe "as wrong user" do
       let(:user) { FactoryGirl.create(:user) }

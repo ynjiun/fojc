@@ -4,6 +4,7 @@ Fojc::Application.routes.draw do
 
   get "blogs/follow"
 
+  resources :relationships, only: [:create, :destroy]
   resources :microposts, only: [:create, :destroy]
   
   resources :pads
@@ -14,7 +15,11 @@ Fojc::Application.routes.draw do
 
   resources :sessions, only: [:new, :create, :destroy]
 
-  resources :users
+  resources :users do
+    member do
+      get :following, :followers
+    end
+  end
   
   match '/signup', to: 'users#new'
   match '/signin',  to: 'sessions#new'
