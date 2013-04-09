@@ -1,0 +1,6 @@
+<%= form_tag blogs_home_path, :method => 'get' do %>
+	<p>
+		<%= text_field_tag :search, params[:search], placeholder: "search micropost here..."  %>
+		<%= submit_tag "Search", :name => nil, class: "btn btn-medium btn-primary" %>
+	</p>
+<% end %>

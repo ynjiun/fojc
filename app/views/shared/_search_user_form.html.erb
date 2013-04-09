@@ -1,0 +1,6 @@
+<%= form_tag users_path, :method => 'get' do %>
+	<p>
+		<%= text_field_tag :search, params[:search], placeholder: "search user here..."  %>
+		<%= submit_tag "Search", :name => nil, class: "btn btn-medium btn-primary" %>
+	</p>
+<% end %>

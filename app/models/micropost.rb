@@ -31,4 +31,12 @@ class Micropost < ActiveRecord::Base
           user_id: user.id)
   end
   
+  def self.search(search)
+    if search
+      find(:all, :conditions => ['content LIKE ?', "%#{search}%"])
+    else
+      find(:all)
+    end
+  end
+  
 end
